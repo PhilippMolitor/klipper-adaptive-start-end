@@ -45,6 +45,10 @@ This set of macros is still in alpha state and very much untested. Running this 
 
 ## Cura
 
+> For Cura, you should consider installing the
+> [Klipper Preprocessor](https://github.com/pedrolamas/klipper-preprocessor)
+> plugin.
+
 Start:
 
 ```gcode
@@ -67,6 +71,22 @@ M140 S0
 PRINT_START TEMP_EXTRUDER=[first_layer_temperature[initial_extruder]] TEMP_BED=[first_layer_bed_temperature]
 ```
 
+Before layer change:
+
+```gcode
+;BEFORE_LAYER_CHANGE
+;[layer_z]
+G92 E0
+```
+
+After layer change:
+
+```gcode
+;AFTER_LAYER_CHANGE
+;[layer_z]
+SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
+```
+
 End:
 
 ```gcode
@@ -81,6 +101,22 @@ Start:
 M104 S0
 M140 S0
 PRINT_START TEMP_EXTRUDER=[first_layer_temperature] TEMP_BED=[first_layer_bed_temperature] TEMP_CHAMBER=[chamber_temperature]
+```
+
+Before layer change:
+
+```gcode
+;BEFORE_LAYER_CHANGE
+;[layer_z]
+G92 E0
+```
+
+After layer change:
+
+```gcode
+;AFTER_LAYER_CHANGE
+;[layer_z]
+SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 ```
 
 End:
@@ -108,6 +144,7 @@ When updating, you should check the contents of this repo's `config/KASE.cfg` as
 
 # Improvements to be done
 
+- Manual line purging is not yet very smart, and extrudes 15mm per line. That needs some brainpower.
 - PrusaSlicer does not support aux fans, so maybe find a good default here that also works with the folks who want to print PLA. Maybe put Chamber Heating into a seperate macro so it can be controlled from the Mainsail UI.
 - Elli's Bed Fan Macros are replacing the default G-Codes for heating, so even when printing PLA they do start the bed fans to increase the chamber temperature.
 - Add support for Beacon meshing
