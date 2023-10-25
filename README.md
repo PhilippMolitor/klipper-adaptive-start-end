@@ -36,10 +36,13 @@ This set of macros is still in alpha state and very much untested. Running this 
     path: ~/klipper-adaptive-start-end
     managed_services: klipper
    ```
-3. Finally, add KASE to your `printer.cfg`:
+3. Add KASE to your `printer.cfg`:
+
    ```ini
    [include KASE.cfg]
    ```
+
+4. Open up your copy of `KASE.cfg` and change any parameters that are relevant to your printer setup.
 
 # Setting up the slicer printer profile
 
