@@ -135,6 +135,8 @@ See `config/KASE.cfg` for reference, and comment in the variables you need. Furt
    Uses the default `M140` and `M190` G-Codes, so Elli's Bed Fan Macros will automatically work.
 3. [StealthBurner Macros](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Ellis/Bed_Fans)<br>
    Updates the StealthBurner status LED automatically.
+4. [Klicky Probe](https://github.com/jlas1/Klicky-Probe)<br>
+   Attaches and docks the Klicky probe whenever homing Z or doing Z adjustments.
 
 # Updating
 
