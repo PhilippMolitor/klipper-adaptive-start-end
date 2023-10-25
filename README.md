@@ -20,21 +20,21 @@ This set of macros is still in alpha state and very much untested. Running this 
 1. SSH into your Klipper host and run these commands:
 
    ```bash
-    cd
-    git clone https://github.com/PhilippMolitor/klipper-adaptive-start-end.git
-    ln -s ~/klipper-adaptive-start-end/config ~/printer_data/config/KASE
-    cp ~/klipper-adaptive-start-end/config/KASE.cfg ~/printer_data/config/KASE.cfg
+   cd
+   git clone https://github.com/PhilippMolitor/klipper-adaptive-start-end.git
+   ln -s ~/klipper-adaptive-start-end/config ~/printer_data/config/KASE
+   cp ~/klipper-adaptive-start-end/config/KASE.cfg ~/printer_data/config/KASE.cfg
    ```
 
 2. If you want automatic updates (recommended), add KASE to the `moonraker.conf` file:
    ```ini
-    [update_manager KASE]
-    type: git_repo
-    channel: dev
-    primary_branch: master
-    origin: https://github.com/PhilippMolitor/klipper-adaptive-start-end.git
-    path: ~/klipper-adaptive-start-end
-    managed_services: klipper
+   [update_manager KASE]
+   type: git_repo
+   channel: dev
+   primary_branch: master
+   origin: https://github.com/PhilippMolitor/klipper-adaptive-start-end.git
+   path: ~/klipper-adaptive-start-end
+   managed_services: klipper
    ```
 3. Add KASE to your `printer.cfg`:
 
