@@ -31,7 +31,7 @@ This set of macros is still in alpha state and very much untested. Running this 
     [update_manager KASE]
     type: git_repo
     channel: dev
-    primary_branch: main
+    primary_branch: master
     origin: https://github.com/PhilippMolitor/klipper-adaptive-start-end.git
     path: ~/klipper-adaptive-start-end
     managed_services: klipper
