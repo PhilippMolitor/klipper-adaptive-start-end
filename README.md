@@ -21,19 +21,19 @@ This set of macros is still in alpha state and very much untested. Running this 
 
    ```bash
     cd
-    git clone https://github.com/PhilippMolitor/Klipper-Adaptive-Start-End.git
-    ln -s ~/Klipper-Adaptive-Start-End/config ~/printer_data/config/KASE
-    cp ~/Klipper-Adaptive-Start-End/config/KASE.cfg ~/printer_data/config/KASE.cfg
+    git clone https://github.com/PhilippMolitor/klipper-adaptive-start-end.git
+    ln -s ~/klipper-adaptive-start-end/config ~/printer_data/config/KASE
+    cp ~/klipper-adaptive-start-end/config/KASE.cfg ~/printer_data/config/KASE.cfg
    ```
 
 2. If you want automatic updates (recommended), add KASE to the `moonraker.conf` file:
    ```ini
-    [update_manager Klipper-Adaptive-Start-End]
+    [update_manager KASE]
     type: git_repo
     channel: dev
     primary_branch: main
-    origin: https://github.com/PhilippMolitor/Klipper-Adaptive-Start-End.git
-    path: ~/Klipper-Adaptive-Start-End
+    origin: https://github.com/PhilippMolitor/klipper-adaptive-start-end.git
+    path: ~/klipper-adaptive-start-end
     managed_services: klipper
    ```
 3. Finally, add KASE to your `printer.cfg`:
@@ -45,9 +45,7 @@ This set of macros is still in alpha state and very much untested. Running this 
 
 ## Cura
 
-> For Cura, you should consider installing the
-> [Klipper Preprocessor](https://github.com/pedrolamas/klipper-preprocessor)
-> plugin.
+> For Cura, you should consider installing the [Klipper Preprocessor](https://github.com/pedrolamas/klipper-preprocessor) plugin.
 
 Start:
 
