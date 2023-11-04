@@ -147,8 +147,7 @@ When updating, you should check the contents of this repo's `config/KASE.cfg` as
 
 # Improvements to be done
 
-- Currently, the position finding parts do not work with delta printers, as deltas use `0, 0` for the XY center coordinates.
-- Manual line purging is not yet very smart, and extrudes 15mm per line. That needs some brainpower.
+- Manual line purging is not yet very smart, and extrudes 15mm per line. That needs some brainpower. It also doesn't support delta printers at all.
 - PrusaSlicer does not support aux fans, so maybe find a good default here that also works with the folks who want to print PLA. Maybe put Chamber Heating into a seperate macro so it can be controlled from the Mainsail UI.
 - Elli's Bed Fan Macros are replacing the default G-Codes for heating, so even when printing PLA they do start the bed fans to increase the chamber temperature.
 - Add support for Beacon meshing
