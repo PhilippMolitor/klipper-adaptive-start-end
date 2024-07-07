@@ -23,7 +23,7 @@ This set of macros is still in alpha state and very much untested. Running this 
    cd
    git clone https://github.com/PhilippMolitor/klipper-adaptive-start-end.git
    ln -s ~/klipper-adaptive-start-end/config ~/printer_data/config/KASE
-   cp ~/klipper-adaptive-start-end/config/KASE.cfg ~/printer_data/config/KASE.cfg
+   cp ~/klipper-adaptive-start-end/KASE.cfg ~/printer_data/config/KASE.cfg
    ```
 
 2. If you want automatic updates (recommended), add KASE to the `moonraker.conf` file:
