@@ -53,7 +53,7 @@ This set of macros is still in alpha state and very much untested. Running this 
 Start:
 
 ```gcode
-PRINT_START TEMP_EXTRUDER={material_print_temperature_layer_0} TEMP_BED={material_bed_temperature_layer_0} TEMP_CHAMBER={build_volume_temperature}
+PRINT_START TEMP_EXTRUDER={material_print_temperature_layer_0} TEMP_BED={material_bed_temperature_layer_0} TEMP_CHAMBER={build_volume_temperature} MATERIAL={material_type}
 ```
 
 End:
@@ -69,7 +69,7 @@ Start:
 ```gcode
 M104 S0
 M140 S0
-PRINT_START TEMP_EXTRUDER=[first_layer_temperature[initial_extruder]] TEMP_BED=[first_layer_bed_temperature]
+PRINT_START TEMP_EXTRUDER=[first_layer_temperature[initial_extruder]] TEMP_BED=[first_layer_bed_temperature] MATERIAL=[filament_type[0]]
 ```
 
 Before layer change:
@@ -101,7 +101,7 @@ Start:
 ```gcode
 M104 S0
 M140 S0
-PRINT_START TEMP_EXTRUDER=[first_layer_temperature] TEMP_BED=[first_layer_bed_temperature] TEMP_CHAMBER=[chamber_temperature]
+PRINT_START TEMP_EXTRUDER=[nozzle_temperature_initial_layer] TEMP_BED=[bed_temperature_initial_layer_single] TEMP_CHAMBER=[chamber_temperature] MATERIAL=[filament_type]
 ```
 
 Before layer change:
