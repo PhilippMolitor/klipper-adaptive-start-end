@@ -1,4 +1,4 @@
-# Klipper Adaptive Start and End
+# Klipper Adaptive Start / End
 
 # IMPORTANT NOTICE
 
@@ -6,14 +6,21 @@ This set of macros is still in alpha state and very much untested. Running this 
 
 # Printer feature support
 
-- XYZ Homing (of course)
-- Chamber / bed fans
+- Calibration
+  - XYZ Homing (of course)
+  - Z tilt adjust
+  - Quad gantry leveling
+  - Mesh bed leveling
 - Bed heat soaking
-- Max extruder temperature for probes that use the nozzle
-- Z tilt adjust
-- Quad gantry leveling
-- Mesh bed leveling
 - Purging
+- Chamber / bed fans
+- Max extruder temperature for probes that use the nozzle
+- DangerKlipper
+  - MPC filament parameters setup
+
+# Prerequisites
+
+1. Either [mainsail-config](https://github.com/mainsail-crew/mainsail-config) or [fluidd-config](https://github.com/fluidd-core/fluidd-config) installed
 
 # Klipper side installation (MainsailOS / Moonraker)
 
